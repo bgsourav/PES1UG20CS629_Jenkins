@@ -6,7 +6,7 @@ pipeline{
                 sh 'cd main'
                 sh 'ls'
                 sh 'cd main'
-                sh 'ls'
+                sh 'ls /main'
                 sh 'g++ -c hello.cpp'
                 sh 'g++ -o PES1UG20CS629 hello.cpp'
                 echo 'build stage successfull'
