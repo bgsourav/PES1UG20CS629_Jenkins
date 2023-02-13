@@ -16,7 +16,8 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                sh 'mvn deploy'
+                sh "scp hello user@deploymentserver:/path/to/deployment/directory"
+                sh "ssh user@deploymentserver 'cd /path/to/deployment/directory && ./hello restart'"
                 echo 'Deployment Successful'
             }
         }
